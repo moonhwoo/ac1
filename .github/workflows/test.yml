@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: Get Artifact
         uses: actions/download-artifact@v4
-        with:
+        with: ##모든 아티팩트 가져오면안되므로 이름으로 가져오기
           name: data-file
       - name: Print data.txt
         run: cat data.txt
