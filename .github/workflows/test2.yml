@@ -6,9 +6,11 @@ jobs:
      steps:
       - name: Conditional
         if: ${{github.event_name == 'push' }} 
+        #push라는 이벤트가 발생하였을때 이 step이 실행된다.
         run: echo "This runs on push events only."
   info:
     runs-on: ubuntu-latest
     steps:
       - name: Output Github context
         run: echo "${{ github.repository }}"
+        #github context의 repository 정보를 출력한다.
